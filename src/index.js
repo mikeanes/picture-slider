@@ -50,3 +50,13 @@ function showSlides(n){
     slides[slideIndex-1].style.display = 'block';
     dots[slideIndex-1].className += ' active';
 }
+
+function autoSlides(){
+    slideIndex++;
+    if(slideIndex === 5){
+        slideIndex = 1;
+    }
+    showSlides(slideIndex);
+}
+
+setInterval(autoSlides, 5000);
